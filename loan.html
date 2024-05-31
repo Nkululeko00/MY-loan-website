@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Care</title>
+    <link rel="stylesheet" href="loan.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .header-container {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        .nav-links {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        .nav-links li {
+            margin: 0 15px;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .container {
+            width: 80%;
+            margin: auto;
+            padding: 20px;
+        }
+
+        h1, h2 {
+            color: #333;
+        }
+
+        section {
+            padding: 20px 0;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .form-container {
+            background-color: #f9f9f9;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            display: none; /* Initially hide the form */
+        }
+
+        .notification {
+            display: none;
+            padding: 10px;
+            margin-top: 10px;
+        }
+
+        .success {
+            color: #4CAF50;
+        }
+
+        .error {
+            color: #f44336;
+        }
+
+        .photo-gallery {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            justify-content: space-between;
+        }
+
+        .photo-gallery img {
+            width: calc(25% - 10px); /* Adjust the width to fit four images in a row with gaps */
+            max-width: 100%;
+            border-radius: 10px;
+        }
+
+        .button-container {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        .button-container button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .button-container button:hover {
+            background-color: #45a049;
+        }
+
+        .contact-details {
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <h1>Student Care</h1>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="home">
+        <div class="container">
+            <h2>Welcome to Student Care</h2>
+            <p>Your partner in educational success. We provide financial assistance and support to ensure you can focus on your studies and achieve your goals.</p>
+            <div class="photo-gallery">
+                <img src="c:/Users/HELLO/Downloads/OIP (2).jpeg" alt="Photo 1">
+                <img src="c:/Users/HELLO/Downloads/download (2).jpeg" alt="Photo 2">
+                <img src="c:/Users/HELLO/Downloads/OIP (4).jpeg" alt="Photo 3">
+                <img src="c:/Users/HELLO/Downloads/download.jpeg" alt="Photo 4">
+            </div>
+        </div>
+    </section>
+
+    <section id="about">
+        <div class="container">
+            <h2>About Us</h2>
+            <p>Student Care is dedicated to supporting students in need. Our mission is to provide the necessary resources and financial aid to help students overcome their challenges and succeed academically.</p>
+        </div>
+    </section>
+
+    <section id="services">
+        <div class="container">
+            <h2>Our Services</h2>
+            <p>We offer a range of services including financial aid, counseling, and academic support. Our goal is to ensure every student has the opportunity to succeed, regardless of their financial situation.</p>
+        </div>
+    </section>
+
+    <section id="contact">
+        <div class="container">
+            <h2>Contact Us</h2>
+            <form id="contactForm">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+
+                <button type="submit">Send</button>
+            </form>
+            <div class="contact-details">
+                <p>Email: support@studentcare.com</p>
+                <p>Phone: +123 456 7890</p>
+                <p>Address: 123 Student Care Avenue, Education City, Country</p>
+            </div>
+            <div class="button-container">
+                <button onclick="showForm()">Apply for a Loan</button>
+            </div>
+        </div>
+    </section>
+
+    <div class="container form-container" id="loanFormContainer">
+        <h1>Student Care Application</h1>
+        <form id="loanForm">
+            <h2>Student Details</h2>
+            <label for="fullName">Full Name:</label>
+            <input type="text" id="fullName" name="fullName" required>
+
+            <label for="surname">Surname:</label>
+            <input type="text" id="surname" name="surname" required>
+
+            <label for="address">Address:</label>
+            <input type="text" id="address" name="address" required>
+
+            <label for="residentName">Resident/Apartment Name:</label>
+            <input type="text" id="residentName" name="residentName" required>
+
+            <label for="studentContact">Student Contact Number:</label>
+            <input type="text" id="studentContact" name="studentContact" required>
+
+            <label for="email">Email Address:</label>
+            <input type="text" id="email" name="email" required>
+            
+            <label for="studentNumber">Student Number:</label>
+            <input type="text" id="studentNumber" name="studentNumber" required>
+            
+            <label for="institutionName">Name of Institution:</label>
+            <input type="text" id="institutionName" name="institutionName" required>
+            
+            <label for="proofOfRegistration">Upload Proof of Registration:</label>
+            <input type="file" id="proofOfRegistration" name="proofOfRegistration" required>
+
+            <label for="proofOfRegistration">Upload id document(cetified):</label>
+            <input type="file" id="idDocument" name="idDocument" required>
+
+            <label for="proofOfPayment">Upload Proof of Payment:</label>
+            <input type="file" id="proofOfPayment" name="proofOfPayment" required>
+
+            <label for="maxoofer"> Amount Needed(Min R100  - Max R500):</label>
+            <input type="number" id="amountNeeded" name="amountNeeded" max="500" required>
+
+            <label for="paymentMethod">Payment Method:</label>
+            <select id="paymentMethod" name="paymentMethod" required>
+                <option value="nsfas">NSFAS</option>
+                <option value="selfPayer">Self-Payer</option>
+            </select>
+
+            <h2>Parent Details</h2>
+            <label for="parentName">Parent initials:</label>
+            <input type="text" id="parentName" name="parentName" required>
+
+            <label for="parentSurname">Parent Surname:</label>
+            <input type="text" id="parentSurname" name="parentSurname" required>
+
+            <label for="parentAddress">Parent Address:</label>
+            <input type="text" id="parentAddress" name="parentAddress" required>
+
+            <label for="parentEmail">Parent Email:</label>
+            <input type="text" id="parentEmail" name="parentEmail" required>
+
+            <label for="parentContact">Parent Contact Number:</label>
+            <input type="text" id="parentContact" name="parentContact" required>
+
+            <button type="submit">Submit</button>
+        </form>
+        <div id="notification" class="notification"></div>
+    </div>
+
+    <script>
+        function showForm() {
+            document.getElementById('loanFormContainer').style.display = 'block';
+            document.getElementById('loanFormContainer').scrollIntoView({ behavior: 'smooth' });
+        }
+
+        document.getElementById('loanForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            
+            let amountNeeded = parseInt(document.getElementById('amountNeeded').value);
+            let notification = document.getElementById('notification');
+            
+            if (amountNeeded <= 500) {
+                notification.innerText = 'Loan Approved!';
+                notification.className = 'notification success';
+            } else {
+                notification.innerText = 'Loan Not Approved: Amount exceeds R500';
+                notification.className = 'notification error';
+            }
+            notification.style.display = 'block';
+        });
+
+        document.getElementById('contactForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            alert('Your message has been sent!');
+        });
+    </script>
+</body>
+</html>
